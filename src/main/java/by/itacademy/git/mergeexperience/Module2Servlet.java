@@ -1,5 +1,6 @@
 package by.itacademy.git.mergeexperience;
 
+import by.itacademy.git.mergeexperience.topics.Module1Topics;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -7,6 +8,7 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 
 @WebServlet("/module2")
 public class Module2Servlet extends HttpServlet {
@@ -23,8 +25,13 @@ public class Module2Servlet extends HttpServlet {
         PrintWriter out = response.getWriter();
         out.println("<html><body>");
         out.println("<h1>" + message + "</h1>");
-
-        out.println("<a href='/'>Назад</a>");
+        out.println("Список тем:</br>");
+        for (Module1Topics value : Module1Topics.values()) {
+            out.println(value.getTopic() + ": " + value.getDesc() + "</br>");
+        }
+        out.println("</br><a href=\"/module1\">Предыдущий модуль</a>");
+        out.println("</br><a href=\"/module3\">Следующий модуль</a>");
+        out.println("</br><a href='/'>Назад</a>");
         out.println("</body></html>");
     }
 
