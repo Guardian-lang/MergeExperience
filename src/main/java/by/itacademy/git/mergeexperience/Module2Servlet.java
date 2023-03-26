@@ -29,8 +29,8 @@ public class Module2Servlet extends HttpServlet {
         for (Module1Topics value : Module1Topics.values()) {
             out.println(value.getTopic() + ": " + value.getDesc() + "</br>");
         }
-        out.println("</br><a href=\"/module1\">Предыдущий модуль</a>");
-        out.println("</br><a href=\"/module3\">Следующий модуль</a>");
+        out.println("</br><a href=\"/module1\">&#8592Предыдущий модуль</a>");
+        out.println("</br><a href=\"/module3\">Следующий модуль&#8594</a>");
         out.println("</br><a href='/'>Назад</a>");
         out.println("</body></html>");
     }
