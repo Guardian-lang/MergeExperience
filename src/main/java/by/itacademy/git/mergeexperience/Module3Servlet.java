@@ -23,6 +23,10 @@ public class Module3Servlet extends HttpServlet {
         PrintWriter out = response.getWriter();
         out.println("<html><body>");
         out.println("<h1>" + message + "</h1>");
+        out.println("<table>");
+        out.println("<caption>Модуль 3</caption>");
+
+        out.println("</table>");
         out.println("</br><a href=\"/module2\">&#8592Предыдущий модуль</a>");
         out.println("</br><a href=\"/module4\">Следующий модуль&#8594</a>");
         out.println("</br><a href='/'>Назад</a>");
