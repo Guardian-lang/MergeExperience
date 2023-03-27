@@ -26,7 +26,6 @@ public class Module2Servlet extends HttpServlet {
         PrintWriter out = response.getWriter();
         out.println("<html><body>");
         out.println("<h1>" + message + "</h1>");
-        out.println("Список тем:</br> ");
         for (Module2Topics value : Module2Topics.values())
             out.println("<tr><td>"
                     + value.getOrder() + "</td><td>"
